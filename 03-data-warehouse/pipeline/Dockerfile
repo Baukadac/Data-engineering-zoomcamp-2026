@@ -19,7 +19,7 @@ RUN uv sync --locked
 
 COPY service-account.json service-account.json
 # Copy ingestion script
-COPY ingest_data.py ingest_data.py 
+COPY load_yellow_taxi_data.py load_yellow_taxi_data.py 
 
 # Set entry point to run the ingestion script
-ENTRYPOINT [ "python", "ingest_data.py" ]
+ENTRYPOINT [ "python", "load_yellow_taxi_data.py" ]
